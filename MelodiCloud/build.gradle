@@ -1,0 +1,114 @@
+//this section contains the versions of the maven libraries
+def AAVersion = '3.2'
+
+
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+apply plugin: 'android-apt'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    }
+}
+
+
+apt {
+    arguments {
+        androidManifestFile variant.outputs[0].processResources.manifestFile
+        resourcePackageName "com.melodicloud"
+    }
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.0"
+
+    defaultConfig {
+        applicationId "com.melodicloud"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-project.txt'
+        }
+    }
+
+    /**
+     * Bug in Gradle v0.7.1. The LICENSE and NOTICE files in the Apache Commons
+     * library jars need to be excluded or the project won't compile/build.
+     */
+    packagingOptions {
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':licensesdialoglibrary')
+    compile project(':quickScroll')
+    compile project(':velocityviewpagerlibrary')
+    compile project(':dragsortlistviewlibrary')
+    compile project(':viewpagerindicatorlibrary')
+    compile project(':circularImageView')
+    compile project(':picasso')
+    apt "org.androidannotations:androidannotations:$AAVersion"
+    compile "org.androidannotations:androidannotations-api:$AAVersion"
+    compile('com.crashlytics.sdk.android:crashlytics:2.2.0@aar') {
+        transitive = true;
+    }
+    compile files('libs/android-async-http-1.4.2-66-g4b6eb97.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/commons-lang3-3.1.jar')
+    compile files('libs/commons-logging.jar')
+    compile files('libs/dashclock-api-r2.0.jar')
+    compile files('libs/google-http-client-1.16.0-rc.jar')
+    compile files('libs/google-http-client-android-1.16.0-rc.jar')
+    compile files('libs/jaudiotagger-2.0.4-20111207.115108-15.jar')
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile files('libs/universal-image-loader-1.9.3-with-sources.jar')
+    compile files('libs/com.haarman.listviewanimations-2.6.0.jar')
+    compile files('libs/nineoldandroids-2.4.0.jar')
+    compile files('libs/renderscript-v8.jar')
+    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:appcompat-v7:22.0.0'
+    compile 'com.google.android.gms:play-services-identity:7.5.0'
+    compile project(':soundcloud-wrapper')
+    compile project(':validator')
+    compile 'com.android.support:recyclerview-v7:22.0.0'
+    compile 'net.orange-box.storebox:storebox-lib:1.0.0'
+}
