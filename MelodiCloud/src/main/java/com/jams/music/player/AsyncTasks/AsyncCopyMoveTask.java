@@ -15,20 +15,19 @@
  */
 package com.jams.music.player.AsyncTasks;
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
 import com.jams.music.player.FoldersFragment.FilesFoldersFragment;
+import com.melodicloud.R;
+
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
 
 public class AsyncCopyMoveTask extends AsyncTask<String, Void, Boolean> {
 	

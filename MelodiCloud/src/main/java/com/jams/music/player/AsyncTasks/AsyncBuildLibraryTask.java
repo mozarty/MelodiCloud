@@ -31,7 +31,7 @@ import android.widget.Toast;
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 import com.jams.music.player.DBHelpers.MediaStoreAccessHelper;
 import com.jams.music.player.FoldersFragment.FileExtensionFilter;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Services.BuildMusicLibraryService;
 import com.jams.music.player.Utils.Common;
 

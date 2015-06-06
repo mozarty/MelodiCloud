@@ -27,7 +27,7 @@ import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.widget.RemoteViews;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.NowPlayingActivity.NowPlayingActivity;
 import com.jams.music.player.Utils.Common;
 import com.jams.music.player.Utils.GaussianBlur;

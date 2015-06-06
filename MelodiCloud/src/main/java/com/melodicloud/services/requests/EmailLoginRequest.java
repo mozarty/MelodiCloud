@@ -12,7 +12,6 @@ public class EmailLoginRequest extends BaseRequest<BaseDto> {
     private final String mPassword;
 
     public EmailLoginRequest(String email, String password) {
-        super(BaseDto.class);
         mEmail = email;
         mPassword = password;
     }

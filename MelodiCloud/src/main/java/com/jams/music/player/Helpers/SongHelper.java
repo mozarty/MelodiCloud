@@ -28,7 +28,7 @@ import android.util.Log;
 
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 import com.jams.music.player.DBHelpers.MediaStoreAccessHelper;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;

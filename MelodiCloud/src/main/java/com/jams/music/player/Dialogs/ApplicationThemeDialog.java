@@ -24,7 +24,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.SettingsActivity.PreferenceDialogLauncherActivity;
 import com.jams.music.player.Utils.Common;
 

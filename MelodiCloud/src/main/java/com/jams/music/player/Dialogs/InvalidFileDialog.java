@@ -22,7 +22,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 
 public class InvalidFileDialog extends DialogFragment {
 

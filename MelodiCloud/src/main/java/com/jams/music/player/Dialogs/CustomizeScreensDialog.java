@@ -37,7 +37,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Helpers.TypefaceHelper;
 import com.mobeta.android.dslv.DragSortListView;
 import com.mobeta.android.dslv.SimpleFloatViewManager;

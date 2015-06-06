@@ -43,7 +43,7 @@ import com.jams.music.player.Dialogs.ID3sArtistEditorDialog;
 import com.jams.music.player.GridViewFragment.GridViewFragment;
 import com.jams.music.player.Helpers.TypefaceHelper;
 import com.jams.music.player.Helpers.UIElementsHelper;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 
 import java.util.HashMap;

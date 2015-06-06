@@ -42,7 +42,7 @@ import com.jams.music.player.GMusicHelpers.GMusicClientCalls;
 import com.jams.music.player.Helpers.UIElementsHelper;
 import com.jams.music.player.NowPlayingActivity.NowPlayingActivity;
 import com.jams.music.player.PlaybackKickstarter.PlaybackKickstarter;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Services.AudioPlaybackService;
 import com.jams.music.player.Services.PinGMusicSongsService;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;

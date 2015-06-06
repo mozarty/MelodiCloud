@@ -1,16 +1,11 @@
 package com.melodicloud.activities;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.view.KeyEvent;
@@ -26,18 +21,12 @@ import com.melodicloud.R;
 import com.melodicloud.common.FastLogin;
 import com.melodicloud.dto.BaseDto;
 import com.melodicloud.services.requests.EmailLoginRequest;
-import com.melodicloud.services.requests.LoadSongsRequest;
 import com.melodicloud.util.LogUtil;
 import com.melodicloud.util.PrefrencesUtil;
-import com.octo.android.robospice.persistence.DurationInMillis;
-import com.octo.android.robospice.persistence.exception.SpiceException;
-import com.octo.android.robospice.request.listener.RequestListener;
 import com.percolate.caffeine.ActivityUtils;
 import com.percolate.caffeine.ToastUtils;
 import com.throrinstudio.android.common.libs.validator.validator.EmailValidator;
 
-import org.androidannotations.annotations.AfterViews;
-import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -131,7 +120,7 @@ public class LoginActivity extends BaseActivity {
     }
 
 
-       /**
+    /**
      * Attempts to sign in or register the account specified by the login form.
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
@@ -181,8 +170,7 @@ public class LoginActivity extends BaseActivity {
             showProgress(true);
             loginRequest = new EmailLoginRequest(email, password);
 
-            spiceManager.execute(loginRequest, lastRequestCacheKey,
-                    DurationInMillis.ALWAYS_EXPIRED, new LoginRequestListener());
+            loginRequest.execute(new LoginRequestListener());
             ToastUtils.quickToast(this, "Login");
         }
     }
@@ -210,10 +198,10 @@ public class LoginActivity extends BaseActivity {
 
 
     private class LoginRequestListener implements
-            RequestListener<BaseDto> {
+            NetworkRequestListener<BaseDto> {
 
         @Override
-        public void onRequestFailure(SpiceException e) {
+        public void onRequestFailure(Exception e) {
             loginRequest = null;
             mEmailSignInButton.setProgress(0);
 

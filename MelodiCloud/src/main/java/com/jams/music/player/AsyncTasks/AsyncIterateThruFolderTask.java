@@ -23,7 +23,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 
 /***********************************************************************************
  * This task goes through the specified parent folder and retrieves the canonical 

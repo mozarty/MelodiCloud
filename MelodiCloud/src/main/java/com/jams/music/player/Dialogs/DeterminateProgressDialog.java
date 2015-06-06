@@ -25,7 +25,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Helpers.TypefaceHelper;
 
 public class DeterminateProgressDialog extends DialogFragment {

@@ -29,7 +29,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.AsyncTasks.AsyncGoogleMusicAuthenticationTask;
 import com.jams.music.player.Helpers.TypefaceHelper;
 import com.jams.music.player.Utils.Common;

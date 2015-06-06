@@ -23,7 +23,7 @@ import android.support.v4.content.LocalBroadcastManager;
 
 import com.google.android.apps.dashclock.api.DashClockExtension;
 import com.google.android.apps.dashclock.api.ExtensionData;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.NowPlayingActivity.NowPlayingActivity;
 import com.jams.music.player.Utils.Common;
 

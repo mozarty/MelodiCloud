@@ -32,7 +32,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 import com.jams.music.player.Utils.TypefaceSpan;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;

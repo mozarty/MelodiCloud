@@ -32,7 +32,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.PowerManager;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 import com.jams.music.player.Services.BuildMusicLibraryService;
 import com.jams.music.player.Services.AudioPlaybackService;

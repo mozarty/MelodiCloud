@@ -22,7 +22,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.AsyncTasks.AsyncApplyEQToGenreTask;
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 import com.jams.music.player.EqualizerActivity.EqualizerActivity;

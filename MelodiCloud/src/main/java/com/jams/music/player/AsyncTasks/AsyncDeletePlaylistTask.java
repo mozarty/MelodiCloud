@@ -23,7 +23,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.GMusicHelpers.GMusicClientCalls;
 import com.jams.music.player.Utils.Common;
 

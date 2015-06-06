@@ -38,7 +38,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.AsyncTasks.AsyncSaveMusicFoldersTask;
 import com.jams.music.player.MiscFragments.BuildingLibraryProgressFragment;
 import com.jams.music.player.Services.BuildMusicLibraryService;

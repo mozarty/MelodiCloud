@@ -24,7 +24,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Dialogs.AddMusicLibraryDialog;
 import com.jams.music.player.Dialogs.AlbumArtSourceDialog;
 import com.jams.music.player.Dialogs.ApplicationThemeDialog;

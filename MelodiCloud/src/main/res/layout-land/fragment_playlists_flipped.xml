@@ -35,7 +35,7 @@
 	            dslv:drag_enabled="true" 
 	            android:drawSelectorOnTop="true"
 	            dslv:click_remove_id="@+id/remove_song_from_queue"
-	            xmlns:dslv="http://schemas.android.com/apk/res/com.jams.music.player" />
+	            xmlns:dslv="http://schemas.android.com/apk/res/com.melodicloud" />
 	        
 	     	<ListView
 	            android:layout_height="wrap_content" 

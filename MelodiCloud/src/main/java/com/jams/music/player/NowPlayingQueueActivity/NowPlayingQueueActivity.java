@@ -30,7 +30,7 @@ import android.text.SpannableString;
 import android.util.DisplayMetrics;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 import com.jams.music.player.Utils.TypefaceSpan;
 

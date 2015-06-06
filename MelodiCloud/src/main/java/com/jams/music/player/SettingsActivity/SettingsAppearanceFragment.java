@@ -35,7 +35,7 @@ import android.widget.Toast;
 import com.jams.music.player.Dialogs.ApplicationThemeDialog;
 import com.jams.music.player.Dialogs.NowPlayingColorSchemesDialog;
 import com.jams.music.player.Helpers.UIElementsHelper;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 
 /**

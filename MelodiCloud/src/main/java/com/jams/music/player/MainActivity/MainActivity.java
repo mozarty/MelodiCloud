@@ -44,7 +44,7 @@ import com.jams.music.player.FoldersFragment.FilesFoldersFragment;
 import com.jams.music.player.GridViewFragment.GridViewFragment;
 import com.jams.music.player.Helpers.UIElementsHelper;
 import com.jams.music.player.ListViewFragment.ListViewFragment;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 
 public class MainActivity extends FragmentActivity {

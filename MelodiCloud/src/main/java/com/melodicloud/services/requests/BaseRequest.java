@@ -1,31 +1,18 @@
 package com.melodicloud.services.requests;
 
-import com.google.gson.Gson;
-import com.octo.android.robospice.request.springandroid.SpringAndroidSpiceRequest;
 
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
+import android.os.AsyncTask;
+
+import com.google.gson.Gson;
+import com.melodicloud.activities.NetworkRequestListener;
 
 /**
  * This Base Request contatins the common methods used by all requests like adding Headers
  *
  * @param <T>
  */
-public abstract class BaseRequest<T> extends SpringAndroidSpiceRequest<T> {
+public abstract class BaseRequest<T> extends AsyncTask<Object, Void, T> {
 
-    public BaseRequest(Class<T> clazz) {
-        super(clazz);
-    }
-
-    protected HttpHeaders getDefaultHeaders() {
-
-        HttpHeaders requestHeaders = new HttpHeaders();
-        requestHeaders.setContentType(MediaType.APPLICATION_JSON);
-        // Add More Application Headers
-        requestHeaders.add("Accept", "application/json");
-
-        return requestHeaders;
-    }
 
     protected String getJsonFromObject(Object object) {
         Gson gson = new Gson();
@@ -33,7 +20,24 @@ public abstract class BaseRequest<T> extends SpringAndroidSpiceRequest<T> {
         return json;
     }
 
+    public abstract T loadDataFromNetwork() throws Exception;
 
+    @Override
+    protected T doInBackground(Object... objects) {
+        NetworkRequestListener listener = (NetworkRequestListener) objects[0];
+        T result = null;
+        try {
+            result = loadDataFromNetwork();
+            if (result == null)
+                listener.onRequestFailure(new NullPointerException());
+            else
+                listener.onRequestSuccess(result);
+        } catch (Exception e) {
+            listener.onRequestFailure(e);
+        }
+
+        return result;
+    }
 
     /**
      * This method generates a unique cache key for this request. In this case

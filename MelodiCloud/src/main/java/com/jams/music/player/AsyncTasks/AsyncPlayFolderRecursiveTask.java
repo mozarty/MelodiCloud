@@ -29,7 +29,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.FoldersFragment.FileExtensionFilter;
 import com.jams.music.player.NowPlayingActivity.NowPlayingActivity;
 

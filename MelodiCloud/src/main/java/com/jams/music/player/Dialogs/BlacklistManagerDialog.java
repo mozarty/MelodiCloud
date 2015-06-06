@@ -23,7 +23,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.BlacklistManagerActivity.BlacklistManagerActivity;
 
 /*******************************************************

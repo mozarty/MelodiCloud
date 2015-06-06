@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2012 Andrew Neal
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright (C) 2012 Andrew Neal
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -44,7 +43,7 @@
 
     <!-- A light Holo shade of green -->
     <color name="holo_green_light">#ff99cc00</color>
-    
+
     <!-- A dark Holo shade of green -->
     <color name="holo_green_dark">#ff669900</color>
 
@@ -60,4 +59,24 @@
     <!-- A dark Holo shade of orange -->
     <color name="holo_orange_dark">#ffff8800</color>
 
+    <color name="border">#C2C2C2</color>
+    <color name="grey_dark">#333333</color>
+    <color name="red_dark">#b70e1d</color>
+    <color name="grey_degree_3">#F4F4F4</color>
+
+
+    <color name="blue_bright">@android:color/holo_blue_bright</color>
+    <color name="green_light">@android:color/holo_green_light</color>
+    <color name="orange_light">@android:color/holo_orange_light</color>
+    <color name="red_light">@android:color/holo_red_light</color>
+
+    <!-- style name="item_progress" -->
+    <color name="item_progress_background">@color/white</color>
+    <color name="item_progress_text">@color/grey_dark</color>
+
+    <color name="soundcloud">#f50</color>
+    <color name="facebook">#3B5998</color>
+    <color name="facebook_trans">#883B5998</color>
+    <color name="googlePlus">#D6492F</color>
+    <color name="googlePlus_trans">#88D6492F</color>
 </resources>

@@ -1,16 +1,12 @@
 package com.melodicloud.activities;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBarActivity;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.melodicloud.R;
 import com.melodicloud.common.Global;
-import com.melodicloud.services.JSONSpiceService;
-import com.octo.android.robospice.SpiceManager;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -22,8 +18,6 @@ import org.androidannotations.annotations.ViewById;
 @EActivity
 public abstract class BaseActivity extends ActionBarActivity {
 
-    protected SpiceManager spiceManager = new SpiceManager(
-            JSONSpiceService.class);
 
     String lastRequestCacheKey;
 
@@ -43,13 +37,11 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     @Override
     protected void onStart() {
-        spiceManager.start(this);
         super.onStart();
     }
 
     @Override
     protected void onStop() {
-        spiceManager.shouldStop();
         super.onStop();
     }
 

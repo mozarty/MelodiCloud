@@ -32,7 +32,7 @@ import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Helpers.TypefaceHelper;
 
 public class CautionEditAlbumsDialog extends DialogFragment {

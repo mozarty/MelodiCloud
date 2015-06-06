@@ -33,7 +33,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 import com.jams.music.player.Views.RangeSeekBar;
 import com.jams.music.player.Views.RangeSeekBar.OnRangeSeekBarChangeListener;

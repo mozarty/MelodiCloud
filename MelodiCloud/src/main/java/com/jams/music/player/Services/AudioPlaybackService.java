@@ -63,7 +63,7 @@ import com.jams.music.player.Helpers.EqualizerHelper;
 import com.jams.music.player.Helpers.SongHelper;
 import com.jams.music.player.NowPlayingActivity.NowPlayingActivity;
 import com.jams.music.player.PlaybackKickstarter.PlaybackKickstarter.BuildCursorListener;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.RemoteControlClient.RemoteControlClientCompat;
 import com.jams.music.player.RemoteControlClient.RemoteControlHelper;
 import com.jams.music.player.Scrobbling.ScrobbleDroidHelper;

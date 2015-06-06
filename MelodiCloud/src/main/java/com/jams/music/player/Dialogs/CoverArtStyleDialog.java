@@ -25,7 +25,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 
 public class CoverArtStyleDialog extends DialogFragment {
 

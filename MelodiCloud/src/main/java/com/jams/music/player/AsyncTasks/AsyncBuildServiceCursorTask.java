@@ -25,7 +25,7 @@ import android.media.MediaMetadataRetriever;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.DBHelpers.LastCursorInfoDBHelper;
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 import com.jams.music.player.DBHelpers.DBAccessHelper;

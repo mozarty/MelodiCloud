@@ -26,7 +26,7 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.FoldersFragment.FilesFoldersFragment;
 
 public class AsyncDeleteTask extends AsyncTask<String, Void, Boolean> {

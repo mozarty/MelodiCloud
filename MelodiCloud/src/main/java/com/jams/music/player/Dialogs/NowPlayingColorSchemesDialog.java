@@ -26,7 +26,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import com.jams.music.player.Helpers.UIElementsHelper;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.SettingsActivity.SettingsActivity;
 import com.jams.music.player.SettingsActivity.SettingsAppearanceFragment;
 

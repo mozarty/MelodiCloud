@@ -32,7 +32,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Helpers.TypefaceHelper;
 import com.jams.music.player.MusicLibraryEditorActivity.LibraryLabelsAdapter;
 import com.jams.music.player.MusicLibraryEditorActivity.MusicLibraryEditorActivity;

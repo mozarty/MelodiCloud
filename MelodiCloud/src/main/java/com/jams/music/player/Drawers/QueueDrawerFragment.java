@@ -46,7 +46,7 @@ import android.widget.Toast;
 import com.jams.music.player.Helpers.TypefaceHelper;
 import com.jams.music.player.Helpers.UIElementsHelper;
 import com.jams.music.player.NowPlayingActivity.NowPlayingActivity;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Services.AudioPlaybackService;
 import com.jams.music.player.Utils.Common;
 import com.mobeta.android.dslv.DragSortListView;

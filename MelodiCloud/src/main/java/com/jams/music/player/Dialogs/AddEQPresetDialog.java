@@ -26,7 +26,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.EqualizerActivity.EqualizerActivity;
 import com.jams.music.player.Helpers.TypefaceHelper;
 import com.jams.music.player.Utils.Common;

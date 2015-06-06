@@ -41,7 +41,7 @@ import com.jams.music.player.Helpers.TypefaceHelper;
 import com.jams.music.player.Helpers.UIElementsHelper;
 import com.jams.music.player.ImageTransformers.PicassoCircularTransformer;
 import com.jams.music.player.ListViewFragment.ListViewFragment;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.Utils.Common;
 
 import java.util.HashMap;

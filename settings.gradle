@@ -1,4 +1,4 @@
-include ':circularImageView', ':picasso', ':soundcloud-wrapper', ':validator'
+include ':circularImageView', ':picasso', ':soundcloud-wrapper', ':validator', ':Library'
 include ':quickScroll'
 include ':dragsortlistviewlibrary'
 include ':licensesdialoglibrary'

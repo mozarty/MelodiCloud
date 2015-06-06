@@ -29,7 +29,7 @@ import com.google.android.gms.auth.GoogleAuthUtil;
 import com.google.android.gms.auth.GooglePlayServicesAvailabilityException;
 import com.google.android.gms.auth.UserRecoverableAuthException;
 import com.google.android.gms.common.GooglePlayServicesUtil;
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.GMusicHelpers.GMusicClientCalls;
 import com.jams.music.player.LauncherActivity.LauncherActivity;
 import com.jams.music.player.SettingsActivity.SettingsActivity____;

@@ -24,7 +24,7 @@ import android.os.AsyncTask;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.AsyncTasks.AsyncPinSongsTask;
 
 public class PinGMusicSongsService extends Service {

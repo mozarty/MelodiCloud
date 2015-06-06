@@ -4,7 +4,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.melodicloud.common.Global;
 import com.melodicloud.util.LogUtil;
-import com.octo.android.robospice.SpiceManager;
 
 import java.util.ArrayList;
 
@@ -15,12 +14,9 @@ import de.voidplus.soundcloud.Track;
  */
 public class LoadSongsRequest extends BaseRequest<ArrayList<Track>> {
 
-    SpiceManager spiceManager;
     boolean forceRefresh = false;
 
-    public LoadSongsRequest(SpiceManager spiceManager, boolean forceRefresh) {
-        super((Class<ArrayList<Track>>) (Class<?>) ArrayList.class);
-        this.spiceManager = spiceManager;
+    public LoadSongsRequest(boolean forceRefresh) {
         this.forceRefresh = forceRefresh;
     }
 
@@ -30,7 +26,7 @@ public class LoadSongsRequest extends BaseRequest<ArrayList<Track>> {
 
         ArrayList<Track> songs;
 
-        songs = getObjectFromJson(spiceManager.getDataFromCache(String.class, createCacheKey()).get());
+        songs = null;//getObjectFromJson(spiceManager.getDataFromCache(String.class, createCacheKey()).get());
 
         if (songs == null || forceRefresh) {
             songs = new ArrayList<>();
@@ -41,7 +37,6 @@ public class LoadSongsRequest extends BaseRequest<ArrayList<Track>> {
                 ArrayList<Track> songsPage = Global.soundcloud.getMeFavorites(offset, 200);
 
                 if (songsPage == null || songsPage.isEmpty()) {
-
                     break;
                 }
                 LogUtil.i("loading", "loaded " + songsPage.size());
@@ -57,7 +52,6 @@ public class LoadSongsRequest extends BaseRequest<ArrayList<Track>> {
 
                 break;
             }
-            spiceManager.putDataInCache(createCacheKey(), getJsonFromObject(songs));
         }
 
         return songs;

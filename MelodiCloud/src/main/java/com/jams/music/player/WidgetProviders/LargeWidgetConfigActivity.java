@@ -27,7 +27,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.RemoteViews;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 
 public class LargeWidgetConfigActivity extends Activity {
 

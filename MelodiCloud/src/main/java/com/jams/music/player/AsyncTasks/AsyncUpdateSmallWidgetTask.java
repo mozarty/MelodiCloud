@@ -28,7 +28,7 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.LauncherActivity.LauncherActivity;
 import com.jams.music.player.NowPlayingActivity.NowPlayingActivity;
 import com.jams.music.player.Utils.Common;

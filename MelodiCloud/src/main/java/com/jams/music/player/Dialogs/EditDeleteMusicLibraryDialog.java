@@ -29,7 +29,7 @@ import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 import com.jams.music.player.MusicLibraryEditorActivity.EditDeleteMusicLibraryAdapter;
 import com.jams.music.player.MusicLibraryEditorActivity.MusicLibraryEditorActivity;

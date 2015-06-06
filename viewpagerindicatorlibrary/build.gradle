@@ -4,11 +4,6 @@ android {
     compileSdkVersion 22
     buildToolsVersion "22.0.0"
 
-    defaultConfig {
-        minSdkVersion 4
-        targetSdkVersion 4
-    }
-
     buildTypes {
         release {
             minifyEnabled false

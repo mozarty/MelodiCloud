@@ -3,22 +3,9 @@ def AAVersion = '3.2'
 
 
 
-buildscript {
-    repositories {
-        maven { url 'https://maven.fabric.io/public' }
-    }
-
-    dependencies {
-        classpath 'io.fabric.tools:gradle:1.+'
-    }
-}
 
 apply plugin: 'com.android.application'
-apply plugin: 'io.fabric'
 
-repositories {
-    maven { url 'https://maven.fabric.io/public' }
-}
 
 
 apply plugin: 'android-apt'
@@ -78,6 +65,7 @@ repositories {
     mavenCentral()
 }
 
+
 dependencies {
     compile project(':licensesdialoglibrary')
     compile project(':quickScroll')
@@ -88,13 +76,7 @@ dependencies {
     compile project(':picasso')
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
-    compile('com.crashlytics.sdk.android:crashlytics:2.2.0@aar') {
-        transitive = true;
-    }
     compile files('libs/android-async-http-1.4.2-66-g4b6eb97.jar')
-    compile files('libs/commons-io-2.4.jar')
-    compile files('libs/commons-lang3-3.1.jar')
-    compile files('libs/commons-logging.jar')
     compile files('libs/dashclock-api-r2.0.jar')
     compile files('libs/google-http-client-1.16.0-rc.jar')
     compile files('libs/google-http-client-android-1.16.0-rc.jar')
@@ -111,4 +93,5 @@ dependencies {
     compile project(':validator')
     compile 'com.android.support:recyclerview-v7:22.0.0'
     compile 'net.orange-box.storebox:storebox-lib:1.0.0'
+    compile project(':Library')
 }

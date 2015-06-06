@@ -23,7 +23,7 @@ import android.database.Cursor;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.DBHelpers.DBAccessHelper;
 
 public class AsyncRemovePinnedSongsTask extends AsyncTask<String, Integer, Boolean> {

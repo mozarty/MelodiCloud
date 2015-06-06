@@ -18,11 +18,16 @@ import com.melodicloud.util.LogUtil;
 
 import org.jaudiotagger.audio.AudioFile;
 import org.jaudiotagger.audio.AudioFileIO;
+import org.jaudiotagger.audio.flac.metadatablock.MetadataBlockDataPicture;
 import org.jaudiotagger.tag.FieldKey;
+import org.jaudiotagger.tag.InvalidFrameException;
 import org.jaudiotagger.tag.Tag;
-import org.jaudiotagger.tag.datatype.Artwork;
+import org.jaudiotagger.tag.images.Artwork;
+import org.jaudiotagger.tag.images.ArtworkFactory;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.util.HashMap;
 
 import de.voidplus.soundcloud.Track;
@@ -104,7 +109,17 @@ public class DownloadService {
                 public void onResourceReady(byte[] data, GlideAnimation anim) {
                     // Post your bytes to a background thread and upload them here.
                     Tag tag = f.getTag();
-                    Artwork artwork = new Artwork();
+
+                    Artwork artwork = null;
+                    try {
+                        ByteBuffer byteBuffer = java.nio.ByteBuffer.allocate(data.length);
+                        byteBuffer.put(data);
+                        artwork = ArtworkFactory.createArtworkFromMetadataBlockDataPicture(new MetadataBlockDataPicture(byteBuffer));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (InvalidFrameException e) {
+                        e.printStackTrace();
+                    }
                     artwork.setDescription(track.getDescription());
                     artwork.setBinaryData(data);
                     try {

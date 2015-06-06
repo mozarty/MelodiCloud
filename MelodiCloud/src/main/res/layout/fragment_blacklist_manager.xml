@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res/com.jams.music.player">
+    android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res/com.melodicloud">
 
     <TextView
         android:id="@+id/blacklist_manager_info_text"
@@ -15,7 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
 	<com.mobeta.android.dslv.DragSortListView
-	    xmlns:dslv="http://schemas.android.com/apk/res/com.jams.music.player"
+		xmlns:dslv="http://schemas.android.com/apk/res/com.melodicloud"
 	    android:id="@+id/blacklist_manager_list"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"

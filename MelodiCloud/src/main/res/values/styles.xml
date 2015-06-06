@@ -1,5 +1,10 @@
 <resources>
 
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
     <!--
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -21,7 +26,7 @@
         All customizations that are NOT specific to a particular API-level can go here.
     </style> -->
     
-    <style name="AppTheme" parent="android:Theme.Holo">
+    <style name="AppOldTheme" parent="android:Theme.Holo">
         <item name="android:actionBarItemBackground">@drawable/selectable_background_apptheme</item>
         <item name="android:popupMenuStyle">@style/PopupMenu.Apptheme</item>
         <item name="android:dropDownListViewStyle">@style/DropDownListView.Apptheme</item>
@@ -32,6 +37,26 @@
         <item name="android:actionModeSplitBackground">@drawable/cab_background_bottom_apptheme</item>
         <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Apptheme</item>
         <item name="android:windowContentOverlay">@drawable/ab_solid_shadow_holo</item>
+    </style>
+
+    <!-- the default style of the progress item text  -->
+    <style name="item_progress">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/item_progress_background</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="item_progress_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">@string/Loading</item>
+        <item name="android:textColor">@color/item_progress_text</item>
+    </style>
+
+    <style name="item_progress_bar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 

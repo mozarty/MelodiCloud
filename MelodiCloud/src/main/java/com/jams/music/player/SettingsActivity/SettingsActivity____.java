@@ -47,7 +47,7 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.jams.music.player.R;
+import com.melodicloud.R;
 import com.jams.music.player.AsyncTasks.AsyncGoogleMusicAuthenticationTask;
 import com.jams.music.player.BlacklistManagerActivity.BlacklistManagerActivity;
 import com.jams.music.player.Helpers.TypefaceHelper;

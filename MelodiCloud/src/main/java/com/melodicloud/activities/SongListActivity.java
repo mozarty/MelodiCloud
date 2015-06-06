@@ -20,12 +20,8 @@ import com.melodicloud.services.DownloadService;
 import com.melodicloud.services.requests.LoadSongsRequest;
 import com.melodicloud.util.FileNameUtil;
 import com.melodicloud.util.LogUtil;
-import com.octo.android.robospice.persistence.DurationInMillis;
-import com.octo.android.robospice.persistence.exception.SpiceException;
-import com.octo.android.robospice.request.listener.RequestListener;
 import com.percolate.caffeine.ToastUtils;
 
-import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.Background;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.UiThread;
@@ -33,8 +29,6 @@ import org.androidannotations.annotations.ViewById;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import de.voidplus.soundcloud.Track;
 
@@ -84,10 +78,9 @@ public class SongListActivity extends BaseActivity implements SearchView.OnQuery
     private void loadSongs(boolean forceRefresh) {
 
         startRefreshing();
-        loadSongsRequest = new LoadSongsRequest(spiceManager,forceRefresh);
+        loadSongsRequest = new LoadSongsRequest(forceRefresh);
 
-        spiceManager.execute(loadSongsRequest, lastRequestCacheKey,
-                DurationInMillis.ALWAYS_RETURNED, new SongsLoadListener());
+        loadSongsRequest.execute(new SongsLoadListener());
         ToastUtils.quickToast(this, "LoadingSongs");
     }
 
@@ -166,10 +159,10 @@ public class SongListActivity extends BaseActivity implements SearchView.OnQuery
     }
 
     private class SongsLoadListener implements
-            RequestListener<ArrayList<Track>> {
+            NetworkRequestListener<ArrayList<Track>> {
 
         @Override
-        public void onRequestFailure(SpiceException e) {
+        public void onRequestFailure(Exception e) {
             ToastUtils.quickToast(SongListActivity.this, "Failed to load songs");
             stopRefreshing();
         }
